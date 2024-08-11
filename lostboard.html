@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>게시물 등록</title>
+</head>
+<body>
+  <h1>게시물 등록</h1>
+  <form id="form" action="/lostboard" method="post" enctype="multipart/form-data">
+    <label for="category">카테고리 선택:</label>
+    <select name="category_id" id="category" required>
+      <option value="1">전자기기</option>
+      <option value="2">지갑</option>
+      <option value="3">카드</option>
+      <option value="4">가방</option>
+      <option value="5">의류 및 잡화</option>
+      <option value="6">귀금속</option>
+      <option value="7">금융자산 (현금, 채권 등)</option>
+      <option value="8">도서</option>
+      <option value="9">쇼핑백</option>
+      <option value="10">증명서</option>
+      <option value="11">자동차용품</option>
+      <option value="12">기타</option>
+    </select>
+    <br><br>
+
+    <label for="title">게시물 제목:</label>
+    <input type="text" id="title" name="lost_title" required>
+    <br><br>
+
+    <label for="content">게시물 내용:</label>
+    <textarea id="content" name="lost_content" required></textarea>
+    <br><br>
+
+    <label for="image">이미지 업로드:</label>
+    <input type="file" id="image" name="image" accept="image/*" required>
+    <br><br>
+
+    <button type="submit">게시물 등록</button>
+  </form>
+</body>
+</html>
